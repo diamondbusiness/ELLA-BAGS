@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">    
+<style>
+
+    /*Header */
+
+   /* Custom styles for icons and spacing */
+   .header-icon {
+    font-size: 1.5rem;
+    color: gray;
+    margin-right: 1rem;
+    }
+    .divider {
+        height: 24px;
+        width: 1px;
+        background-color: #ccc;
+        margin: 0 1rem;
+    }
+    .brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        margin-left: 200px;
+    }
+
+
+    @media (max-width: 768px) {
+        .navbar-brand {
+            margin-left: 0;
+        }
+        
+    }
+
+
+    /*  */
+
+
+        .cart-header {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .summary-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .summary-box h5 {
+            font-weight: bold;
+        }
+        .checkout-btn {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+        }
+        .table-container {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            width: 65%;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding-top: 20px;
+                width: 100%;
+                background-color: #f0f0f0;
+            }
+        }
+
+        /* Custom styles for product display */
+        .product {
+            margin-top: 100px;
+        }
+
+        .product-card {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card:hover {
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            color: gray;
+        }
+
+        .add-to-cart {
+            width: 80%;
+            background-color: #444;
+            color: white;
+            padding: 10px 0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .product-card:hover .add-to-cart {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+   
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Menu Icon, always visible -->
+            <button type="button" class="btn border-0" data-toggle="modal" data-target="#signInModal">
+                <i style="font-size: 30px;" class="fas fa-bars"></i>
+            </button>
+    
+            <!-- Sign In Modal -->
+            <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body p-4">
+                            <h4 class="text-center mb-3">SIGN IN</h4>
+                            <p class="text-center">Password details are case-sensitive.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 mb-3">SIGN IN</button>
+                                <div class="text-center">
+                                    <a href="#" class="text-decoration-none">Forgot your password?</a>
+                                </div>
+                                <hr>
+                                <button type="button" class="btn btn-outline-secondary w-100 mt-3">CREATE ACCOUNT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <a class="navbar-brand brand" href="#">ELLA BAGS</a>
+    
+            <div class="d-flex align-items-center">
+                <a href="#" class="header-icon"><i class="fas fa-search"></i></a>
+    
+                <a href="#" class="header-icon d-none d-md-inline" data-toggle="modal" data-target="#signInModal">
+                    <i class="fas fa-user"></i>
+                </a>
+    
+                <div class="divider d-none d-md-inline"></div>
+    
+                <a href="#" class="header-icon text-warning">
+                    <i class="fas fa-shopping-bag"></i> 
+                    <span class="d-none d-md-inline">Cart (0)</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <p><a href="#">Trang chủ</a> | <strong>Shopping cart</strong></p>
+            <div class="d-flex justify-content-between content">
+                 <h2 class="cart-header">SHOPPING CART</h2>
+                 <a href="#" class="text-decoration-none">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-8 table-container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">(0) Items</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="summary-box">
+                <h5>SUMMARY</h5>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span>Subtotal</span>
+                    <span>0 vnđ</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Sale</span>
+                    <span>0 vnđ</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span><strong>Subtotal</strong></span>
+                    <span><strong>0 vnđ</strong></span>
+                </div>
+                <button class="btn checkout-btn mt-3">Check out</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container product">
+        <h2 class="text-center mb-4">CÓ GÌ MỚI?</h2>
+        <div class="row">
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+                <div class="product-card">
+                    <img src="./Img/img1.jpeg" alt="Jetta Bag">
+                    <div class="product-name">Jetta Bag</div>
+                    <div class="product-price">550.000vnđ</div>
+                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+                <div class="product-card">
+                    <img src="./Img/img2.jpeg" alt="Jules Bag">
+                    <div class="product-name">Jules Bag</div>
+                    <div class="product-price">630.000vnđ</div>
+                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+                <div class="product-card">
+                    <img src="./Img/img3.jpeg" alt="Beryl Bag">
+                    <div class="product-name">Beryl Bag</div>
+                    <div class="product-price">650.000vnđ</div>
+                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+                <div class="product-card">
+                    <img src="./Img/img4.jpeg" alt="Gemma Bag">
+                    <div class="product-name">Gemma Bag</div>
+                    <div class="product-price">650.000vnđ</div>
+                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 50px 8% 0 8%">
+    <h1>ELLA BAGS</h1>
+  <div class="footer" style="display: flex;">
+        <div class="footer-content">
+            <div class="contact-info" style="display: flex; align-items: center;">
+                <div>
+                    <p><strong>Liên hệ:</strong> (+84) 855 225 895</p>
+                    <p><strong>Email:</strong> tuixachlesac@gmail.com</p>
+                    <p><strong>Hà Nội:</strong> 07 Đặng Văn Ngữ, phường Trung Tự, quận Đống Đa, Hà Nội - 115A Cầu Giấy, phường Quan Hoa, quận Cầu Giấy</p>
+                    <p><strong>Sài Gòn:</strong> 104 Lê Văn Sỹ, phường 11, quận Phú Nhuận, thành phố Hồ Chí Minh</p>
+                </div>
+            </div>
+            
+            <div class="company-info">
+                <div >
+                    <h5>CÔNG TY CỔ PHẦN MIFAS</h5>
+                    <p>GCNĐKDN số 0110069011 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 21/07/2022</p>
+                    <p>Địa chỉ trụ sở chính: Tầng 4, số 2 phố Mai Anh Tuấn, Phường Ô Chợ Dừa, Quận Đống Đa, TP Hà Nội</p>
+                    <p>Điện thoại: 0362008007</p>
+                    <p>Email:  tuixachlesac@gmail.com</p>
+                    <img src="./Img/dathongbaobocongthuong.png" alt="Bộ Công Thương" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="footer-form" style="margin: 40px 0 0 10px">
+            <div class="subscribe-form" >
+                <div style="float: right;">
+                    <h5>Đăng ký để nhận thông tin về sản phẩm mới</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-dark" style="white-space: nowrap;">CONTACT US</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-links text-center mt-4">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex;">
+                <img style="width: 20px; height: 20px;" src="./Img/facebook.png">
+                <img style="width: 20px; height: 20px; margin-left: 10px;" src="./Img/instagram.png">
+           </div>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#">VỀ ELLA BAGS</a> 
+            <a href="#">ĐIỀU KIỆN GIAO DỊCH CHUNG</a> 
+            <a href="#">VẬN CHUYỂN VÀ GIAO NHẬN</a> 
+            <a href="#">PHƯƠNG THỨC THANH TOÁN</a> 
+            <a href="#">CHÍNH SÁCH BẢO MẬT THÔNG TIN</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

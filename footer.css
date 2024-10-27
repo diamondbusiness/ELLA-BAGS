@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+a{
+    color: #333333;
+    display: inline-block;
+    transition: font-weight 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+.contact-info, .company-info {
+    font-size: 14px;
+    line-height: 10px;
+}
+
+.company-info {
+    margin-top: 20px;
+}
+
+.footer-links {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #000;
+}
+
+.subscribe-form input[type="email"] {
+    max-width: 300px;
+}
+
+.subscribe-form button {
+    margin-left: 10px;
+}
+
+
+.img-fluid {
+    width: 100%;
+    max-width: 160px;
+    height: auto;   
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+    flex-direction: column;
+    align-items: center;
+    }
+    .footer-content {
+    width: 100%;
+    order: 1;
+
+    }
+    .footer-form {
+    order: 2;
+    margin-top: 20px; 
+    }
+
+    .contact-info, .company-info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
