@@ -6,44 +6,9 @@
     <title>Shopping Cart</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="footer.css">  
-    <link rel="stylesheet" href="eala.css">   
-<style>
-
-    /*Header */
-
-   /* Custom styles for icons and spacing */
-   .header-icon {
-    font-size: 1.5rem;
-    color: gray;
-    margin-right: 1rem;
-    }
-    .divider {
-        height: 24px;
-        width: 1px;
-        background-color: #ccc;
-        margin: 0 1rem;
-    }
-    .brand {
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
-
-    .navbar-brand {
-        margin-left: 200px;
-    }
-
-
-    @media (max-width: 768px) {
-        .navbar-brand {
-            margin-left: 0;
-        }
-        
-    }
-
-
-
-    </style>
+    <link rel="stylesheet" href="./CSS/footer.css">  
+    <link rel="stylesheet" href="./CSS/eala.css">   
+    <link rel="stylesheet" href="./CSS/header.css">
 </head>
 <body>
    
@@ -53,6 +18,17 @@
             <button type="button" class="btn border-0" >
                 <i style="font-size: 30px;" class="fas fa-bars"></i>
             </button>
+
+
+            <div id="sidebarMenu" class="sidebar">
+                <ul class="menu-list">
+                    <li><a href="bosuutap.html">BỘ SƯU TẬP</a></li>
+                    <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                    <li><a href="dichvu.html">DỊCH VỤ</a></li>
+                    <li><a href="EllaBags.html">TUYỂN DỤNG</a></li>
+                    <li><a href="contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
     
             <!-- Sign In Modal -->
             <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
@@ -225,5 +201,6 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
