@@ -55,3 +55,16 @@
     gap: 50px;
     display: flex;
   }
+
+  .footer{
+    margin: 600px 8% 0 8%; 
+    padding-top: 50px;
+     border-top: 1px solid black;
+  }
+  
+@media (max-width: 768px) {
+  .footer{
+      margin-top: 300px;
+  }
+  
+}

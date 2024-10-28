@@ -1,0 +1,92 @@
+
+
+.cart-header {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+}
+        .summary-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .summary-box h5 {
+            font-weight: bold;
+        }
+        .checkout-btn {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+        }
+        .table-container {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            width: 65%;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding-top: 20px;
+                width: 100%;
+                background-color: #f0f0f0;
+            }
+        }
+
+        /* Custom styles for product display */
+        .product {
+            margin-top: 100px;
+        }
+
+        .product-card {
+            text-align: center;
+            padding: 20px 20px 100px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card:hover {
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            color: gray;
+        }
+
+        .add-to-cart {
+            width: 80%;
+            background-color: #444;
+            color: white;
+            padding: 10px 0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+.product-card:hover .add-to-cart {
+    opacity: 1;
+    visibility: visible;
+}

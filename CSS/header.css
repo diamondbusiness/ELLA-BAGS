@@ -1,0 +1,63 @@
+.header-icon {
+    font-size: 1.5rem;
+    color: gray;
+    margin-right: 1rem;
+}
+.divider {
+    height: 24px;
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 1rem;
+}
+.brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand {
+    margin-left: 200px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 0;
+    }
+    
+}
+
+/* Menu Icon */
+.sidebar {
+    height: 250px;
+    width: 0;
+    position: fixed;
+    top: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-top: 20px;
+    margin-top: 50px;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgpa(0, 0, 0 ,0.5);
+}
+
+.menu-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    padding: 10px 15px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+
+.sidebar.open {
+    width: 250px;
+}

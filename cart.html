@@ -6,144 +6,29 @@
     <title>Shopping Cart</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="footer.css">    
-<style>
-
-    /*Header */
-
-   /* Custom styles for icons and spacing */
-   .header-icon {
-    font-size: 1.5rem;
-    color: gray;
-    margin-right: 1rem;
-    }
-    .divider {
-        height: 24px;
-        width: 1px;
-        background-color: #ccc;
-        margin: 0 1rem;
-    }
-    .brand {
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
-
-    .navbar-brand {
-        margin-left: 200px;
-    }
-
-
-    @media (max-width: 768px) {
-        .navbar-brand {
-            margin-left: 0;
-        }
-        
-    }
-
-
-    /*  */
-
-
-        .cart-header {
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .summary-box {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-        }
-        .summary-box h5 {
-            font-weight: bold;
-        }
-        .checkout-btn {
-            background-color: #4CAF50;
-            color: white;
-            width: 100%;
-        }
-        .table-container {
-            margin-bottom: 20px;
-        }
-
-        .content {
-            width: 65%;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                padding-top: 20px;
-                width: 100%;
-                background-color: #f0f0f0;
-            }
-        }
-
-        /* Custom styles for product display */
-        .product {
-            margin-top: 100px;
-        }
-
-        .product-card {
-            text-align: center;
-            padding: 20px 20px 100px 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            position: relative;
-            transition: box-shadow 0.3s ease;
-        }
-        
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .product-card:hover {
-            cursor: pointer;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-name {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .product-price {
-            color: gray;
-        }
-
-        .add-to-cart {
-            width: 80%;
-            background-color: #444;
-            color: white;
-            padding: 10px 0;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            border-radius: 5px;
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-        }
-
-        .product-card:hover .add-to-cart {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+    <link rel="stylesheet" href="./CSS/footer.css"> 
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/cart.css">  
 </head>
 <body>
    
     <nav class="navbar navbar-light bg-white">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <!-- Menu Icon, always visible -->
-            <button type="button" class="btn border-0" data-toggle="modal" data-target="#signInModal">
+            <button type="button" class="btn border-0" >
                 <i style="font-size: 30px;" class="fas fa-bars"></i>
             </button>
+
+
+            <div id="sidebarMenu" class="sidebar">
+                <ul class="menu-list">
+                    <li><a href="bosuutap.html">BỘ SƯU TẬP</a></li>
+                    <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                    <li><a href="dichvu.html">DỊCH VỤ</a></li>
+                    <li><a href="EllaBags.html">TUYỂN DỤNG</a></li>
+                    <li><a href="contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
     
             <!-- Sign In Modal -->
             <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
@@ -173,7 +58,7 @@
                 </div>
             </div>
     
-            <a class="navbar-brand brand" href="#">ELLA BAGS</a>
+            <a class="navbar-brand brand" href="index.html">ELLA BAGS</a>
     
             <div class="d-flex align-items-center">
                 <a href="#" class="header-icon"><i class="fas fa-search"></i></a>
@@ -184,14 +69,13 @@
     
                 <div class="divider d-none d-md-inline"></div>
     
-                <a href="#" class="header-icon text-warning">
+                <a href="cart.html" class="header-icon text-warning">
                     <i class="fas fa-shopping-bag"></i> 
                     <span class="d-none d-md-inline">Cart (0)</span>
                 </a>
             </div>
         </div>
     </nav>
-
     
 <div class="container my-5">
     <div class="row">
@@ -340,5 +224,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="main.js">
+</script>
 </body>
 </html>
