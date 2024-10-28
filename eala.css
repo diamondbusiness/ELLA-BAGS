@@ -1,0 +1,57 @@
+.heading {
+    margin-top: 100px;
+}
+
+.about-desc {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.coreValues {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.core_desc1, .core_desc2{
+    margin: 0 auto;
+    width: 600px;
+}
+
+.content-section {
+    padding: 20px;
+  }
+
+  .content-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .ellabags{
+    margin-top: 100px;
+  }
+
+  .popular {
+    gap: 50px;
+    display: flex;
+  }
