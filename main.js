@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
     
-    // Function to handle search and open a new page
     function performSearch() {
         const query = searchInput.value.trim();
         let newPage = '';
@@ -29,19 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
             newPage = 'tuimini.html';
         } else if (query === "Túi xách tay") {
             newPage = 'tuixachtay.html';
-        } else if(query === "Túi đeo vai"){
-            newPage = "tuideovai.html"
-        } else if(query === "Cardhoder"){
-            newPage = "Cardhoder"
-        } else if(query === "Ví"){
-            newPage = "Vi.html"
-        } else if(query === "Phụ kiện"){
-            newPage = "phukien.html"
-        } 
+        }
 
         if (newPage) {
-            // Replace only the last part of the URL path
-            const newPath = window.location.origin + '/' + newPage;
+            // Get the current base path (e.g., "/ELLA-BAGS/")
+            const basePath = window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+            const newPath = window.location.origin + basePath + newPage;
+
+            // Redirect to the new page
             window.location.replace(newPath);
         }
     }
