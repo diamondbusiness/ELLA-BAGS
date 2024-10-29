@@ -33,21 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (newPage) {
-            // Construct the full URL to redirect to
-            const newPath = `https://diamondbusiness.github.io/ELLA-BAGS/${newPage}`;
-            
-            // Redirect to the new page
+            const newPath = window.location.origin + '/' + newPage;
             window.location.replace(newPath);
         }
     }
 
-    // Event listener for button click
     searchButton.addEventListener('click', performSearch);
 
-    // Event listener for Enter key press
     searchInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             performSearch();
         }
     });
 });
+
