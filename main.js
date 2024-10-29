@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
@@ -31,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (newPage) {
-            // Get the current base path (e.g., "/ELLA-BAGS/")
-            const basePath = window.location.pathname.split('/').slice(0, -1).join('/') + '/';
-            const newPath = window.location.origin + basePath + newPage;
-
+            // Construct the full URL to redirect to
+            const newPath = `https://diamondbusiness.github.io/ELLA-BAGS/${newPage}`;
+            
             // Redirect to the new page
             window.location.replace(newPath);
         }
