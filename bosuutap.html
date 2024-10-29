@@ -16,9 +16,11 @@
 
     <nav class="navbar navbar-light bg-white">
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <button type="button" class="btn border-0">
+            <!-- Menu Icon, always visible -->
+            <button type="button" class="btn border-0" >
                 <i style="font-size: 30px;" class="fas fa-bars"></i>
             </button>
+
 
             <div id="sidebarMenu" class="sidebar">
                 <ul class="menu-list">
@@ -29,15 +31,51 @@
                     <li><a href="contact.html">LIÊN HỆ</a></li>
                 </ul>
             </div>
-
+    
+            <!-- Sign In Modal -->
+            <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body p-4">
+                            <h4 class="text-center mb-3">SIGN IN</h4>
+                            <p class="text-center">Password details are case-sensitive.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 mb-3">SIGN IN</button>
+                                <div class="text-center">
+                                    <a href="#" class="text-decoration-none">Forgot your password?</a>
+                                </div>
+                                <hr>
+                                <button type="button" class="btn btn-outline-secondary w-100 mt-3">CREATE ACCOUNT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
             <a class="navbar-brand brand" href="index.html">ELLA BAGS</a>
-
+    
             <div class="d-flex align-items-center">
-                <a href="#" class="header-icon"><i class="fas fa-search"></i></a>
+
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <span class="search-icon">&#128269;</span> 
+                </div>
+               
+    
                 <a href="#" class="header-icon d-none d-md-inline" data-toggle="modal" data-target="#signInModal">
                     <i class="fas fa-user"></i>
                 </a>
+    
                 <div class="divider d-none d-md-inline"></div>
+    
                 <a href="cart.html" class="header-icon text-warning">
                     <i class="fas fa-shopping-bag"></i> 
                     <span class="d-none d-md-inline">Cart (0)</span>
@@ -74,7 +112,7 @@
     </main>
 
 
-    <footer style="margin: 50px 8% 0 8%; padding-top: 50px; border-top: 1px solid black;">
+    <footer style="margin: 50px 8% 30px 8%; padding-top: 50px; border-top: 1px solid black;">
         <h1>ELLA BAGS</h1>
         <div class="footer" style="display: flex;">
             <div class="footer-content">
@@ -126,6 +164,9 @@
         </div>
       </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
