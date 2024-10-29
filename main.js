@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (newPage) {
             // Construct the full URL to redirect to
-            const newPath = `https://diamondbusiness.github.io/ELLA-BAGS/${newPage}`;
+            const newPath = `https://diamondbusiness.github.io/${newPage}`;
             
             // Redirect to the new page
             window.location.replace(newPath);
