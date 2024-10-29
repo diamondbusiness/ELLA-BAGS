@@ -103,3 +103,10 @@
 }
 
 
+@media (max-width: 768px) {
+    .search-input {
+        display: none;
+    }
+}
+
+
