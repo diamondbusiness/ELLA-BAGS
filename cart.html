@@ -139,7 +139,7 @@
                     <img src="./Img/img1.jpeg" alt="Jetta Bag">
                     <div class="product-name">Jetta Bag</div>
                     <div class="product-price">550.000vnđ</div>
-                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                    <button class="add-to-cart" data-toggle="modal" data-target="#gemmaBagModal">Thêm vào giỏ hàng</button>
                 </div>
             </div>
 
@@ -148,7 +148,7 @@
                     <img src="./Img/img2.jpeg" alt="Jules Bag">
                     <div class="product-name">Jules Bag</div>
                     <div class="product-price">630.000vnđ</div>
-                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                    <button class="add-to-cart" data-toggle="modal" data-target="#gemmaBagModal">Thêm vào giỏ hàng</button>
                 </div>
             </div>
 
@@ -157,7 +157,7 @@
                     <img src="./Img/img3.jpeg" alt="Beryl Bag">
                     <div class="product-name">Beryl Bag</div>
                     <div class="product-price">650.000vnđ</div>
-                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                    <button class="add-to-cart" data-toggle="modal" data-target="#gemmaBagModal">Thêm vào giỏ hàng</button>
                 </div>
             </div>
 
@@ -166,9 +166,40 @@
                     <img src="./Img/img4.jpeg" alt="Gemma Bag">
                     <div class="product-name">Gemma Bag</div>
                     <div class="product-price">650.000vnđ</div>
-                    <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                    <button class="add-to-cart" data-toggle="modal" data-target="#gemmaBagModal">Thêm vào giỏ hàng</button>
                 </div>
             </div>
+
+
+            <!-- The modal -->
+            <div class="modal fade" id="gemmaBagModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">GEMMA BAG</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./Img/img27.jpeg" alt="Gemma Bag" style="width: 100%; height: 400px;">
+                            <p>Giá: 650.000 VND</p>
+                            <p>Số lượng:</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button">-</button>
+                                </div>
+                                <input style="width: 50px;" type="text" class="text-center" value="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button">+</button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-dark btn-block">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
