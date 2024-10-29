@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
@@ -30,7 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
             newPage = 'tuimini.html';
         } else if (query === "Túi xách tay") {
             newPage = 'tuixachtay.html';
-        }
+        } else if(query === "Túi đeo vai"){
+            newPage = "tuideovai.html"
+        } else if(query === "Cardhoder"){
+            newPage = "Cardhoder"
+        } else if(query === "Ví"){
+            newPage = "Vi.html"
+        } else if(query === "Phụ kiện"){
+            newPage = "phukien.html"
+        } 
 
         if (newPage) {
             const newPath = window.location.origin + '/' + newPage;
@@ -46,4 +52,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
