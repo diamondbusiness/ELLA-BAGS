@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/product.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Menu Icon, always visible -->
+            <button type="button" class="btn border-0" >
+                <i style="font-size: 30px;" class="fas fa-bars"></i>
+            </button>
+
+
+            <div id="sidebarMenu" class="sidebar">
+                <ul class="menu-list">
+                    <li><a href="bosuutap.html">BỘ SƯU TẬP</a></li>
+                    <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                    <li><a href="dichvu.html">DỊCH VỤ</a></li>
+                    <li><a href="member.html">THÀNH VIÊN NHÓM</a></li>
+                    <li><a href="contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sign In Modal -->
+            <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body p-4">
+                            <h4 class="text-center mb-3">SIGN IN</h4>
+                            <p class="text-center">Password details are case-sensitive.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 mb-3">SIGN IN</button>
+                                <div class="text-center">
+                                    <a href="#" class="text-decoration-none">Forgot your password?</a>
+                                </div>
+                                <hr>
+                                <button type="button" class="btn btn-outline-secondary w-100 mt-3">CREATE ACCOUNT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <a class="navbar-brand brand" href="index.html">ELLA BAGS</a>
+    
+            <div class="d-flex align-items-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search..." id="searchInput">
+                    <button class="search-icon" id="searchButton">&#128269;</button>
+                </div>
+    
+                <a href="#" class="header-icon d-none d-md-inline" data-toggle="modal" data-target="#signInModal">
+                    <i class="fas fa-user"></i>
+                </a>
+    
+                <div class="divider d-none d-md-inline"></div>
+    
+                <a href="cart.html" class="header-icon text-warning">
+                    <i class="fas fa-shopping-bag"></i> 
+                    <span class="d-none d-md-inline">Cart (0)</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+<main class="container">
+    <img src="/Img/xemThem.png" width="100%">
+
+</main>
+       
+  
+<footer style="margin: 50px 8% 30px 8%; padding-top: 50px; border-top: 1px solid black;">
+    <h1>ELLA BAGS</h1>
+    <div class="footer" style="display: flex;">
+        <div class="footer-content">
+            <div class="contact-info" style="display: flex; align-items: center;">
+                <div>
+                    <p><strong>Liên hệ:</strong> (+84) 855 225 895</p>
+                    <p><strong>Email:</strong> tuixachellabags@gmail.com</p>
+                    <p><strong>Hà Nội:</strong> 07 Đặng Văn Ngữ, phường Trung Tự, quận Đống Đa, Hà Nội - 115A Cầu Giấy, phường Quan Hoa, quận Cầu Giấy</p>
+                    <p><strong>Sài Gòn:</strong> 104 Lê Văn Sỹ, phường 11, quận Phú Nhuận, thành phố Hồ Chí Minh</p>
+                </div>
+            </div>
+            
+            <div class="company-info">
+                <div >
+                    <h5>CÔNG TY CỔ PHẦN MIFAS</h5>
+                    <p>GCNĐKDN số 0110069011 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 21/07/2022</p>
+                    <p>Địa chỉ trụ sở chính: Tầng 4, số 2 phố Mai Anh Tuấn, Phường Ô Chợ Dừa, Quận Đống Đa, TP Hà Nội</p>
+                    <p>Điện thoại: 0362008007</p>
+                    <p>Email:  tuixachellabags@gmail.com</p>
+                    <img src="./Img/dathongbaobocongthuong.png" alt="Bộ Công Thương" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="footer-form" style="margin: 40px 0 0 10px">
+            <div class="subscribe-form" >
+                <div style="float: right;">
+                    <h5>Đăng ký để nhận thông tin về sản phẩm mới</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-dark" style="white-space: nowrap;">CONTACT US</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-links text-center mt-4">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex;">
+                <img style="width: 20px; height: 20px;" src="./Img/facebook.png">
+                <img style="width: 20px; height: 20px; margin-left: 10px;" src="./Img/instagram.png">
+        </div>
+            <a href="#">VỀ ELLA BAGS</a> 
+            <a href="dieuKienGiaoDichChung.html">ĐIỀU KIỆN GIAO DỊCH CHUNG</a> 
+            <a href="vanchuyenvagiaohang.html">VẬN CHUYỂN VÀ GIAO NHẬN</a> 
+            <a href="phuongthucthanhtoan.html">PHƯƠNG THỨC THANH TOÁN</a> 
+            <a href="chinhSachBaoMatThonhTin.html">CHÍNH SÁCH BẢO MẬT THÔNG TIN</a>
+        </div>
+    </div>
+  </footer>
+
+</body>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js">
+
+</script>
+
+</body>
+</html>
+
+
+
+
