@@ -2,18 +2,79 @@ document.querySelector(".btn").addEventListener("click", function() {
     document.getElementById("sidebarMenu").classList.toggle("open");
 });
 
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const currentModal = this.closest('.modal'); // Finds the parent modal of the clicked button
+
+        // Hide the current modal
+        $(currentModal).modal('hide');
+
+        // When the current modal is fully hidden, show the Sign-In modal
+        $(currentModal).on('hidden.bs.modal', function () {
+            $('#signInModal').modal('show');
+        });
+    });
+});
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const addToCartButton = document.querySelector('.add-to-cart-btn');
     
     addToCartButton.addEventListener('click', function () {
-        $('#gemmaBagModal').modal('hide');
+        $('#gallery1').modal('hide');
 
-        $('#gemmaBagModal').on('hidden.bs.modal', function () {
+        $('#gallery1').on('hidden.bs.modal', function () {
             $('#signInModal').modal('show');
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButton = document.querySelector('.add-to-cart-btn');
+    
+    addToCartButton.addEventListener('click', function () {
+        $('#gallery2').modal('hide');
+
+        $('#gallery2').on('hidden.bs.modal', function () {
+            $('#signInModal').modal('show');
+        });
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButton = document.querySelector('.add-to-cart-btn');
+    
+    addToCartButton.addEventListener('click', function () {
+        $('#gallery3').modal('hide');
+
+        $('#gallery3').on('hidden.bs.modal', function () {
+            $('#signInModal').modal('show');
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButton = document.querySelector('.add-to-cart-btn');
+    
+    addToCartButton.addEventListener('click', function () {
+        $('#gallery4').modal('hide');
+
+        $('#gallery4').on('hidden.bs.modal', function () {
+            $('#signInModal').modal('show');
+        });
+    });
+});
+
+
+
+
+
 
 
 
