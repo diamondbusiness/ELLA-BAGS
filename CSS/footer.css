@@ -48,6 +48,10 @@ a{
     margin-top: 50px;
 }
 
+.subscribe-form {
+    margin-left: 10px;
+}
+
 
 @media (max-width: 768px) {
     .footer {
